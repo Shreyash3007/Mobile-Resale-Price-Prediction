@@ -36,6 +36,9 @@ This project predicts the resale price of smartphones based on their specs using
 ## 🚀 How To Run
 
 1. Clone this repo  
-2. Install requirements  
-   ```bash
+2. Install requirements
    pip install -r requirements.txt
+3. Make sure data/cleaned_final.csv is in place
+4. Run the predictor:
+   python scripts/predictor.py
+
