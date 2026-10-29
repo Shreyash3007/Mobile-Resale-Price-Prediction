@@ -1,35 +1,26 @@
-#Smartphone Resale Price Estimator (Regression Model)
+# Smartphone Price Prediction
 
-This project predicts the resale price of smartphones based on their specs using a Random Forest machine learning model.
+A small machine-learning project that estimates phone prices from specifications using a Random Forest regressor.
 
----
+## What is included
 
-## 🧠 Features Used
+- `Predictor`: the Python training and evaluation script; the filename has no extension.
+- `cleaned_final.csv`: the input dataset.
+- `regression line .jpeg`: a saved plot.
 
-- RAM
-- Internal Storage
-- Battery Capacity
-- Camera Megapixels (Rear + Front)
-- Processor (Encoded)
-- Brand (Encoded)
-- Spec Score
+The script uses an 80/20 train/test split with `random_state=42`, trains 100 trees, and prints R², RMSE, and feature importance. Inputs include specification score, battery, RAM, storage, camera specifications, and encoded brand/processor fields.
 
----
+## Run locally
 
-## 🛠️ Technologies
+```bash
+python -m pip install pandas numpy scikit-learn matplotlib seaborn
+python Predictor
+```
 
-- Python 3.11+
-- Pandas, NumPy
-- scikit-learn
-- matplotlib, seaborn
+Run from the repository root so the script can locate the CSV. The plot opens in a local window.
 
----
+## Limits
 
-## 📈 Model Performance
+This is a learning experiment, not a validated resale valuation service. The code targets the dataset’s `price` column; the repository does not establish that this represents real resale transactions. Earlier approximate headline scores are omitted because no fresh reproducible run is recorded here. Dependency versions are not pinned.
 
-- **R² Score**: ~0.85
-- **RMSE**: ₹10,000 (approx)
-- **Algorithm**: Random Forest Regressor
-
----
-
+Built by [Shreyash Sakhare](https://github.com/Shreyash3007).
